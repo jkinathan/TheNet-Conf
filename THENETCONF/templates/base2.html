@@ -1,0 +1,67 @@
+{% load static %}
+<!Doctype html>
+
+    <head>
+    <title>Net Conference 2021</title>
+
+        <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+        <link id="theme-style" rel="stylesheet" href="{% static 'css/theme.css' %}">
+
+    </head>
+    <body>
+        <header>
+        <strong style="color: white; background-color: white;">
+            <img class="logo" src="{% static 'images/uculogo.png' %}">
+        </strong>
+            <div class="time">May 17 - May 20</div>
+            <div class="countdown-time">
+                <span class="d">22</span>
+                d
+                ::
+                <span class="h">1</span>
+                h
+                ::
+                <span class="m">48</span>
+                m
+                ::
+                <span class="s">6</span>
+                s
+            </div>
+            <nav>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a style="color: white;" href="{% url 'program' %}">Program/Schedule</a></li>
+                <li><a style="color: white;" href="{% url 'committee' %}">Committee</a></li>
+                <li><a style="color: white;" href="">About</a></li>
+                <li><a style="color: white;" href="">Contact</a></li>
+            </nav>
+        </header>
+
+        {% block content %}
+
+        {% endblock content %}
+        
+        <footer style="background-color: black;">
+            <ul class="linear-list">
+                <li>
+                    <a href="">Code of Conduct</a>
+                </li>
+                <li>
+                    <a href="">Terms</a>
+                </li>
+                <li>
+                    <a href="">Privacy</a>
+                </li>
+                <li>
+                    <a href="">Event sponsorship</a>
+                </li>
+                <li>
+                    <a href="">events@github.com</a>
+                </li>
+            </ul>
+            <a href="">
+                <img class="logo" src="{% static 'GitHub-invertocat.svg' %}">
+            </a>
+            <p class="copyright">© 2020 GitHub. All rights reserved.</p>
+        </footer>
+    </body>
+</html>
