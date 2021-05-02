@@ -82,7 +82,7 @@ class Program(models.Model):
     day = models.ForeignKey(Day,on_delete=models.CASCADE)
     start_time = models.TimeField(default='14:00')
     end_time = models.TimeField(default='15:00')
-    speaker = models.ForeignKey(Participant,on_delete=models.CASCADE) 
+    speaker = models.ForeignKey(Participant,on_delete=models.CASCADE)
     description = models.TextField(max_length=250)
     picture = models.ImageField(null=True, blank=True,upload_to='images/')
     
@@ -100,7 +100,4 @@ class Contact(models.Model):
     
     def __str__(self):
         return self.name #name to be shown when called
-TYPES = (
-        ('Attendee', 'Attendee'),
-        ('Presenter', 'Presenter'),
-    )
+

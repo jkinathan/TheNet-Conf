@@ -3,7 +3,7 @@
 
     <head>
     <title>Net Conference 2021</title>
-
+        <link rel="icon" href="{% static 'images/faviucu.png' %}">
         <link rel="stylesheet" href="{% static 'css/style2.css' %}">
         <link id="theme-style" rel="stylesheet" href="{% static 'css/theme.css' %}">
 
@@ -14,25 +14,12 @@
             <img class="logo" src="{% static 'images/uculogo.png' %}">
         </strong>
             <div class="time">May 17 - May 20</div>
-            <div class="countdown-time">
-                <span class="d">22</span>
-                d
-                ::
-                <span class="h">1</span>
-                h
-                ::
-                <span class="m">48</span>
-                m
-                ::
-                <span class="s">6</span>
-                s
-            </div>
+            
             <nav>
-                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a style="color: white;" href="{% url 'index' %}">Home</a></li>
                 <li><a style="color: white;" href="{% url 'program' %}">Program/Schedule</a></li>
                 <li><a style="color: white;" href="{% url 'committee' %}">Committee</a></li>
-                <li><a style="color: white;" href="">About</a></li>
-                <li><a style="color: white;" href="">Contact</a></li>
+                <li><a style="color: white;" href="{% url 'contact' %}">Contact</a></li>
             </nav>
         </header>
 
@@ -42,26 +29,21 @@
         
         <footer style="background-color: black;">
             <ul class="linear-list">
-                <li>
-                    <a href="">Code of Conduct</a>
-                </li>
-                <li>
-                    <a href="">Terms</a>
-                </li>
-                <li>
-                    <a href="">Privacy</a>
-                </li>
-                <li>
-                    <a href="">Event sponsorship</a>
-                </li>
-                <li>
-                    <a href="">events@github.com</a>
-                </li>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'program' %}">Program/Schedule</a></li>
+                <li><a href="{% url 'committee' %}">Committee</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
             </ul>
             <a href="">
-                <img class="logo" src="{% static 'GitHub-invertocat.svg' %}">
+                <img src="{% static 'images/uculogo.png' %}">
             </a>
-            <p class="copyright">© 2020 GitHub. All rights reserved.</p>
+            <p class="copyright gradient-text">© 2021 NetConference. All rights reserved.</p>
         </footer>
+    <script src="{% static 'plugins/jquery-3.4.1.min.js' %}"></script>
+	<script src="{% static 'plugins/popper.min.js' %}"></script>
+	<script src="{% static 'plugins/bootstrap/js/bootstrap.min.js' %}"></script>  
+	<script src="{% static 'plugins/back-to-top.js' %}"></script>
+	<script src="{% static 'plugins/jquery.scrollTo.min.js' %}"></script>
+	<script src="{% static 'js/main.js' %}"></script>
     </body>
 </html>

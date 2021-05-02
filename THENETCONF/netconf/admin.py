@@ -15,6 +15,9 @@ class ProgramAdmin(admin.ModelAdmin):
 class EventAdmin(admin.ModelAdmin):
     list_display = ['name','venue','Start_date','End_date','picture_tag']
 
+class ContactAdmin(admin.ModelAdmin):
+    list_display = ['name','email','message']
+
 
 # Register your models here.
 
@@ -24,5 +27,5 @@ admin.site.register(models.CommitteeMember,CommitteeMemberAdmin)
 admin.site.register(models.Participant,ParticipantAdmin)
 admin.site.register(models.Day)
 admin.site.register(models.Program,ProgramAdmin)
-admin.site.register(models.Contact)
+admin.site.register(models.Contact,ContactAdmin)
 

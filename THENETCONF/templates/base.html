@@ -3,9 +3,41 @@
 
     <head>
     <title>Net Conference 2021</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
+        <link rel="icon" href="{% static 'images/faviucu.png' %}">
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
-        <!-- <link id="theme-style" rel="stylesheet" href="{% static 'css/theme.css' %}"> -->
+        
+<style>
+    input[type=text] {
+  {% comment %} width: 100%; {% endcomment %}
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ff7571;
+  border-radius: 4px;
+}
+textarea[type=text] {
+  {% comment %} width: 100%;
+  height: 150px; {% endcomment %}
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ff7571;
+  border-radius: 4px;
+}
+{% comment %} .column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+} {% endcomment %}
+</style>
 
     </head>
     <body>
@@ -14,54 +46,38 @@
             <img class="logo" src="{% static 'images/uculogo.png' %}">
         </strong>
             <div class="time">May 17 - May 20</div>
-            <div class="countdown-time">
-                <span class="d">22</span>
-                d
-                ::
-                <span class="h">1</span>
-                h
-                ::
-                <span class="m">48</span>
-                m
-                ::
-                <span class="s">6</span>
-                s
-            </div>
+            
             <nav>
                 <li><a href="{% url 'index' %}">Home</a></li>
                 <li><a href="{% url 'program' %}">Program/Schedule</a></li>
                 <li><a href="{% url 'committee' %}">Committee</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
             </nav>
         </header>
+            {% if messages %}
+                                
+                <div class="inputContainer">
+                {% for message in messages %}
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">{{ message|safe }}</div>
+                {% endfor %}
+                </div>
 
+            {% endif %}
         {% block content %}
 
         {% endblock content %}
         
         <footer>
             <ul class="linear-list">
-                <li>
-                    <a href="">Code of Conduct</a>
-                </li>
-                <li>
-                    <a href="">Terms</a>
-                </li>
-                <li>
-                    <a href="">Privacy</a>
-                </li>
-                <li>
-                    <a href="">Event sponsorship</a>
-                </li>
-                <li>
-                    <a href="">events@github.com</a>
-                </li>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'program' %}">Program/Schedule</a></li>
+                <li><a href="{% url 'committee' %}">Committee</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
             </ul>
             <a href="">
-                <img class="logo" src="{% static 'GitHub-invertocat.svg' %}">
+                <img src="{% static 'images/uculogo.png' %}">
             </a>
-            <p class="copyright">© 2020 GitHub. All rights reserved.</p>
+            <p class="copyright gradient-text">© 2021 NetConference. All rights reserved.</p>
         </footer>
     </body>
 </html>

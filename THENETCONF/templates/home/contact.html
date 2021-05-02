@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+        <section class="content content-small">
+            <div class="container">
+                <h1 class="gradient-text">Contact Us</h1>
+                <p >
+                    Address: <span class="gradient-text">Uganda Christian University Mukono; Nkoyoyo Hall</span>
+
+                </p>
+                <p>
+                    Email: 
+                    <span class="gradient-text">netconf@ucu.ac.ug</span>
+                    
+                </p>
+                <p>
+                    Telephone1:
+                    <span class="gradient-text">0704503342 &nbsp; Kinobe Jordan - Admin Developer</span>
+                    </p>
+                    <p>
+                    Telephone2:
+                    <span class="gradient-text">0775237211 &nbsp; Nicholas Bonny - Organiser</span>
+                    
+                </p>
+                <p>
+                    You have questions, and we have (some) answers. If you can’t find what you’re looking for, 
+                    
+                </p>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="{% static 'images/ucumap.png' %}" width="100%" height="400px;"/>
+                    </div>
+                    <div class="col-md-6">
+                        <form method="POST" action="{% url 'contact' %}">
+                            {% csrf_token %}
+                            <p>
+                            <label for="fname"  class="gradient-text">Name:</label>
+                            <input class="form-control" type="text" required id="fname" placeholder="Enter Your Name" name="name">
+                            </p>
+                            
+                            <p>
+                            <label for="lname" class="gradient-text">Email:</label>
+                            <input class="form-control"  type="text" required id="lname" placeholder="Enter Your Email" name="email">
+                            </p>
+        
+                            <p>
+                            <label for="lname" class="gradient-text">Message:</label>
+                            <textarea class="form-control" rows="4" type="text" required id="lname" placeholder="Enter your Message" name="message"></textarea>
+                            </p>
+        
+                            <input class="button" type="submit" name="send" value="Send Message">
+                        </form>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+{% endblock content %}

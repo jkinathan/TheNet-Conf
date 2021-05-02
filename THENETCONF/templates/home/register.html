@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+        <section class="content content-small">
+            <div class="container">
+                <h1 class="gradient-text">Register Participant</h1>
+
+                <div class="row">
+                    
+                    <div class="col-md-12">
+                        <form method="POST" action="{% url 'register' %}">
+                            {% csrf_token %}
+                            <p>
+                                <input class="form-control" type="text" required id="fname" placeholder="Enter Your Name" name="name">
+                            </p>
+                            <p>                    
+                                <input class="form-control"  type="email" required id="lname" placeholder="Enter Your Email" name="email">
+                            </p>
+                            <p>
+                                <input class="form-control" type="text" required id="fname" placeholder="Enter Your title" name="title">
+                            </p>
+                            <p>                    
+                                <input class="form-control"  type="text" required id="lname" placeholder="Enter Your phone number" name="phone">
+                            </p>
+                            <p>
+                                <input class="form-control" type="text" required id="fname" placeholder="Enter Your Address" name="address">
+                            </p>
+                            <p>
+                                <select class="form-control" name="presenter">
+                                    <option>Presenter</option>
+                                    <option>Attendee</option>
+                                </select>
+                            </p>
+                            <p>                    
+                            <input class="form-control"  type="text" required id="lname" placeholder="Enter the topic you are presenting" name="topictopresent">
+                            </p>
+                            <p>
+                                <textarea class="form-control" rows="4" type="text" required id="lname" placeholder="Enter description for topic" name="description"></textarea>
+                            </p>
+                            <p>                   
+                                Upload Your Picture
+                            <input class="form-control"  type="file" name="pic">
+                            </p>
+                            <input class="button" type="submit" name="register" value="Register Now">
+                        </form>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+{% endblock content %}
