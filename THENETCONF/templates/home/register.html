@@ -9,7 +9,7 @@
                 <div class="row">
                     
                     <div class="col-md-12">
-                        <form method="POST" action="{% url 'register' %}">
+                        <form method="POST" action="{% url 'register' %}" enctype="multipart/form-data">
                             {% csrf_token %}
                             <p>
                                 <input class="form-control" type="text" required id="fname" placeholder="Enter Your Name" name="name">
@@ -40,7 +40,7 @@
                             </p>
                             <p>                   
                                 Upload Your Picture
-                            <input class="form-control"  type="file" name="pic">
+                            <input class="form-control" type="file" name="pic">
                             </p>
                             <input class="button" type="submit" name="register" value="Register Now">
                         </form>
@@ -48,6 +48,7 @@
                 </div>
                 
             </div>
+            <hr class="gradient">
         </section>
         
 {% endblock content %}

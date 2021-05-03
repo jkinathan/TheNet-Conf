@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.contrib import messages
 from django.views.generic import TemplateView, ListView
 from .models import Participant, Program, Partner, CommitteeMember, Contact
+from django.core.files.storage import FileSystemStorage
 # Create your views here.
 
 
@@ -60,7 +61,7 @@ def contact(request):
     return render(request,'home/contact.html')
 
 def register(request):
-
+    folder='static/images'
     if "register" in request.POST:
         name = request.POST["name"]
         title = request.POST["title"]
@@ -70,8 +71,16 @@ def register(request):
         presenter = request.POST["presenter"]
         topic_to_Present = request.POST["topictopresent"]
         topic_description = request.POST["description"]
-        picture = request.POST["pic"]
+        picture = request.FILES["pic"]
+        picture = request.FILES['pic']
+        fs = FileSystemStorage(location=folder) #defaults to   MEDIA_ROOT  
+        filename = fs.save(picture.name, picture)
+        file_url = fs.url(filename)
+
+        # pico = "images/"+picture
         
+        print(file_url)
+
         participant = Participant(
             name              =name,
             title             =title,
