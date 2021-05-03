@@ -24,13 +24,14 @@
             <h1>Researchers</h1>
             <ul class="speaker-list">
 
-            {% for researcher in reseachers %}
+            {% for researcher in researchers %}
+                <h4>{{ researcher.name }}</h4>
                 <li>
                     <img alt="researcher" src="{{ researcher.picture.url }}">
                     <h3>{{ researcher.topic_to_Present }}</h3>
-                    <h4>N:{{ reseacher.name }}</h4>
-                    <h5>T:{{ reseacher.title }}</h5>
+                    <h5>{{ researcher.title }}</h5>
                 </li>
+                
             {% endfor %}
                 
             </ul>
@@ -52,29 +53,20 @@
             <h4 class="text-gradient-purple">Have fun along the way</h4>
             <p>Musical performances inspired by code and a few more surprises to come!</p>
         </section>
+        
         <hr class="gradient">
-        <!-- <hr> -->
         <section class="subscribe">
-            <p>
-                We’re adding more speakers every day!<br>Sign up for updates to stay in the loop.    
-            </p>
-            <br>
-            <a href="#subscribe" class="button" target="_blank">
-                <span>Subscribe for updates</span>
-            </a>
-        </section>
-        <hr class="gradient">
-        <section class="sponsors">
             <div class="container">
                 <h4>Thank you to our Partners</h4>
                 <ul class="sponsor-list">
                 
-                    
+                    {% for partner in partners %}
                     <li>
-                        <a href="/sponsors/bridgecrew/" data-ga-click="Home, click, cta_text: open Bridgecrew page">
-                        <img src="https://githubuniverse.com/assets/img/sponsors/Bridgecrew.svg" alt="Bridgecrew">
+                        <a href="" data-ga-click="Home, click, cta_text: open Bridgecrew page">
+                        <img src="{{ partner.picture.url }}" alt="Bridgecrew">
                         </a>
                     </li>
+                    {% endfor %}
                      
                 </ul>
                 <br>
@@ -84,7 +76,7 @@
             </div>
         </section>
         <section class="updates">
-            <p class="signup-text"><a class="underline" href="">Sign up</a> to participate in the NetConference 2021</p>
+            <p class="signup-text"><a class="underline" href="{% url 'register' %}">Sign up</a> to participate in the NetConference 2021</p>
             <p class="follow-text">Follow the event <span class="text-gradient-purple">#NetConference</span></p>
             <ul class="linear-list">
                 <li>
@@ -109,4 +101,5 @@
                 </li>
             </ul>
         </section>
+        <hr class="gradient">
 {% endblock content %}

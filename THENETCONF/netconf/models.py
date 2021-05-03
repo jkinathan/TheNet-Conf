@@ -9,9 +9,6 @@ class Partner(models.Model):
     location = models.CharField(max_length=250) 
     picture = models.ImageField(null=True, blank=True,upload_to='images/')
 
-    # category = models.ForeignKey(Category, default="general",on_delete=models.CASCADE)
-    # author = models.ForeignKey(User,on_delete=models.CASCADE) 
-
     def picture_tag(self):
         return mark_safe('<img src="{}" height="50"/>'.format(self.picture.url))
     picture_tag.short_description = 'Picture'

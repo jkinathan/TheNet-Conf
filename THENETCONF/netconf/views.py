@@ -12,7 +12,7 @@ class Intro(ListView):
     
 
 def index(request):
-    researcher = Participant.objects.all()
+    researcher = Participant.objects.filter(presenter="Presenter")
     partner = Partner.objects.all()
     # presenters = Researcher.objects.get(presenter='Presenter')
 
