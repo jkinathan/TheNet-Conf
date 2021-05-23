@@ -1,6 +1,6 @@
 # TheNet-Conf
 Conference Application built in django for BSCS2 exam
-
+webapp visit: https://jordankinathan.pythonanywhere.com/
 ## Setup
 
 1. Git Clone the project with: ```git clone https://github.com/jkinathan/TheNet-Conf.git```.
