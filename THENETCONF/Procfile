@@ -1,0 +1,1 @@
+web: gunicorn THENETCONF.wsgi --log-file -
