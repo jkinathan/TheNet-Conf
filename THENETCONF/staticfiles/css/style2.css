@@ -1,0 +1,290 @@
+/*
+ * @Name: GitHub Event Web
+ * @Author: Max Base
+ * @Repository: https://github.com/BaseMax/GitHubEventWeb
+*/
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+* {
+    padding: 0;
+    margin: 0;
+}
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+body {
+    background: #000;
+    color: white;
+    font-family: "Open Sans";
+}
+.gradient-subtext {
+    background: -webkit-linear-gradient(270.97deg, #FFE580 -21.36%, #FF7571 -2.45%, #EA5DAD 26.84%, #C2A0FD 64.15%, #3BF0E4 108.29%, #B2F4B6 159.03%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.gradient-text {
+    /* background: -webkit-linear-gradient(270.97deg, #FFE580 -21.36%, #FF7571 -2.45%, #EA5DAD 26.84%, #C2A0FD 64.15%, #3BF0E4 108.29%, #B2F4B6 159.03%); */
+    background: linear-gradient(267.91deg, #FFE57F 9.35%, #FF7170 96.48%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.text-gradient-purple {
+    background: linear-gradient(87.54deg, #9867F0 -6.8%, #ED4E50 84.14%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.button {
+    font-family: "alliance", mono, sans-serif;
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: none;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 4px 28px;
+    height: 56px;
+    border-radius: 0;
+    overflow: hidden;
+    background: transparent;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    font-feature-settings: 'salt' on, 'ss01' on, 'ss02' on;
+    color: #fff;
+    border: 2px solid #FF7571;
+}
+.button:hover {
+    background: linear-gradient(269.16deg, #FFE580 -15.83%, #FF7571 -4.97%, #FF7270 15.69%, #EA5DAD 32.43%, #C2A0FD 50.09%, #9867F0 67.47%, #3BF0E4 84.13%, #33CE43 105.13%, #B2F4B6 123.24%);
+    background-position: 58% 50%;
+    background-size: 500%;
+    color: black;
+}
+section.updates {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    border-top: 1px solid rgba(66,82,109,0.5);
+    border-bottom: 1px solid rgba(66,82,109,0.5);
+    padding-top: 45px;
+    padding-bottom: 45px;
+    color: #B5BFD2;
+}
+section.updates p.signup-text {
+    font-size: 20px;
+}
+section.updates p.follow-text {
+    margin-top: 35px;
+}
+footer {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    color: #959da5;
+}
+footer ul {
+    width: 100%;
+    float: left;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+footer .logo {
+    width: 45px;
+    margin-bottom: 10px;
+}
+footer .copyright {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+ul.linear-list {
+
+}
+ul.linear-list li {
+    display: inline-block;
+    padding: 10px;
+}
+header {
+    display: inline-block;
+    width: 100%;
+    height: 70px;
+    background: #040303;
+    border-bottom: 1px solid rgba(66,82,109,0.5);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+header nav {
+    float: right;
+    margin-right: 30px;
+}
+header nav li {
+    display: inline-block;
+    margin-left: 9px;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+header nav li.active {
+    border-bottom: 2px solid #d73a49;
+    /* border-bottom: 2px solid #FFE57F;  */
+}
+section.blog {
+    width: 100%;
+    float: left;
+}
+section.blog .subtitle {
+    color: #FFE57F;
+}
+section.blog h1 {
+    font-size: 45px;
+    color: #FFE57F;
+    margin-bottom: 15px;
+}
+section.blog p {
+    text-align: justify;
+    line-height: 30px;
+    padding-top: 8px;
+    padding-bottom: 15px;
+}
+section.blog .author {
+    float: left;
+    margin-left: 20px;
+    margin-bottom: 35px;
+}
+section.blog .time {
+    color: #B5BFD2;
+}
+section.blog .author .details {
+    float: left;
+    margin-left: 15px;
+}
+section.blog .author h5 {
+    width: 100%;
+    margin-top: 5px;
+    font-size: 19px;
+    margin-bottom: 5px;
+}
+section.blog .author span {
+    width: 100%;
+}
+section.blog .author img {
+    float: left;
+    width: 70px;
+    border-radius: 50%;
+}
+header .logo {
+    width: 250px;
+    float: left;
+    margin-right: 15px;
+    margin-top: 8px;
+    margin-left: 25px;
+    background-color: white;
+    border-radius: 10px;
+}
+header .time {
+    float: left;
+    line-height: 60px;
+    color: #B5BFD2;
+}
+header .countdown-time {
+    float: left;
+    line-height: 60px;
+    margin-left: 15px;
+}
+section.sponsors {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    background-color: #040303;
+    /* border-top: 1px solid rgba(66,82,109,0.5); */
+}
+section.speakers {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    background-color: #040303;
+}
+section.attends {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    background-color: #040303;
+    background-image: url('shape-bl.webp');
+    background-position: bottom/left;
+    background-attachment: cover;
+    background-repeat: no-repeat;
+}
+section.attends h2 {
+    font-size: 59px;
+    margin-bottom: 60px;
+    margin-top: 45px;
+}
+section.attends h4 {
+    font-size: 29px;
+}
+section.attends p {
+    color: #B5BFD2;
+    margin-bottom: 50px;
+}
+section.content-small {
+    height: auto !important;
+}
+section.content-small h1 {
+    margin-top: 0px !important;
+}
+section.content {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    height: 500px;
+    background-color: #040303;
+    background-image: url('pattern-light.svg');
+    background-position: center;
+    background-attachment: cover;
+    background-repeat: no-repeat;
+}
+section.sponsors h4 {
+    font-size: 36px;
+    line-height: 96px;
+}
+section.content h1 {
+    font-size: 96px;
+    line-height: 96px;
+    margin-top: 45px;
+    margin-bottom: 25px;
+}
+section.content p {
+    margin-bottom: 15px;
+    color: #B5BFD2;
+    font-size: 22px;
+}
+
+hr.gradient {
+    background: linear-gradient(269.16deg, #FFE580 -15.83%, #FF7571 -4.97%, #FF7270 15.69%, #EA5DAD 32.43%, #C2A0FD 50.09%, #9867F0 67.47%, #3BF0E4 84.13%, #33CE43 105.13%, #B2F4B6 123.24%);
+    height: 8px;
+}
+hr {
+    background: rgba(66,82,109,0.5);
+    height: 1px;
+    border: none;
+}
+section.subscribe {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    background: url(cta-bg.png) center/100% auto no-repeat;
+    padding: 120px 0;
+}
+section.subscribe p {
+    width: 100%;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
