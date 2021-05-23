@@ -1,1 +1,1 @@
-web: gunicorn THENETCONF.wsgi --log-file -
+web: gunicorn netconf.wsgi --log-file -
