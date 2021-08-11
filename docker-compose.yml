@@ -6,6 +6,5 @@ services:
     command: python THENETCONF/manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/home/kinathan/Desktop/TheNet-Conf
-      - .db_data/db.sqlite3:/db.sqlite3
     ports:
       - "8000:8000"
